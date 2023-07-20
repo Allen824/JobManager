@@ -18,7 +18,7 @@ class DataManager:
                     job = Job(job_id, name, job_completed)
                     jobs.append(job)
         except FileNotFoundError:
-            print("No data file found. Returning an empty task list.")
+            print("No data file found. Returning an empty job list.")
         return jobs
 
     # Saves the jobs the user input to jobs.txt
@@ -29,5 +29,5 @@ class DataManager:
                     job_data = [str(job.job_id), job.name, str(job.completed)]
                     file.write(",".join(job_data) + "\n")
         except IOError:
-            print("An error occurred while saving the tasks.")
+            print("An error occurred while saving the jobs.")
 
