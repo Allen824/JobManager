@@ -115,7 +115,7 @@ class ToDoListGUI(tk.Frame):
             job_completed = self.job_manager.get_job_by_id(job_id).completed
             if job_completed:
                 self.job_listbox.itemconfig(index, {'bg': 'lightgreen'})
-            # unhighlights job if "marked completed" button is triggered again
+            # Unhighlights job if "marked completed" button is triggered again
             else:
                 self.job_listbox.itemconfig(index, {'bg': 'white'})
 
